@@ -37,7 +37,8 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
       show: false,
       showFilter: false,
       selectedLevel: [],
-      selectedShift: ""
+      selectedShift: "",
+      drawer: false
     };
   },
   components: {
@@ -429,6 +430,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_v_card = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("v-card");
   var _component_v_navigation_drawer = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("v-navigation-drawer");
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_v_navigation_drawer, {
+    modelValue: _ctx.drawer,
+    "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
+      return _ctx.drawer = $event;
+    }),
     "class": "px-2",
     floating: "",
     width: 450,
@@ -550,7 +555,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       })];
     }),
     _: 1 /* STABLE */
-  });
+  }, 8 /* PROPS */, ["modelValue"]);
 }
 
 /***/ }),
